@@ -93,9 +93,14 @@ const loadEvent = function () {
 
     // Write your JavaScript code after this line
 
-    for (let product of products) {
-        document.getElementById("root").insertAdjacentHTML("beforeend", divElement(product));
-    }
+    let rootElement = document.getElementById("root");
+
+    products.forEach((product) => {
+        rootElement.insertAdjacentHTML("beforeend", divElement(product));
+    })
+    // for (let product of products) {
+    //     document.getElementById("root").insertAdjacentHTML("beforeend", divElement(product));
+    // }
 
     // Write your JavaScript code before this line
 
